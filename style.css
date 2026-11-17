@@ -1,0 +1,42 @@
+:root{--bg:#f5f6f8;--s:#fff;--ink:#16213a;--mute:#5b6478;--line:#dde1e9;--brand:#1d2f5c;--on:#fff;--acc:#e3a72f;--bad:#b3261e;--ok:#1a7f4b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1524;--s:#18203a;--ink:#eef1f7;--mute:#a3acc2;--line:#2b3556;--brand:#8fa8ee;--on:#0f1524;--bad:#ff8a80;--ok:#6fd49b}}
+:root[data-theme="dark"]{--bg:#0f1524;--s:#18203a;--ink:#eef1f7;--mute:#a3acc2;--line:#2b3556;--brand:#8fa8ee;--on:#0f1524;--bad:#ff8a80;--ok:#6fd49b}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Source Sans 3",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1,h2,h3,.brand{font-family:"Bricolage Grotesque","Arial Black",sans-serif;margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:2px dashed var(--line);display:flex;align-items:center;gap:8px;padding:10px 16px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.5rem;letter-spacing:-.02em;margin-right:auto;background:none;border:0;padding:0}
+.btn{background:var(--brand);color:var(--on);border:0;border-radius:8px;padding:9px 16px;font-weight:600}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.wrap{max-width:1100px;margin:0 auto;padding:16px}
+.hero{padding:24px 0 4px}.hero h1{font-size:clamp(2.2rem,7vw,4rem);line-height:1;letter-spacing:-.035em;max-width:12ch}.hero p{color:var(--mute);max-width:46ch}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0;align-items:center}
+.chip{border:1px solid var(--line);background:var(--s);border-radius:999px;padding:6px 14px}
+.chip[aria-pressed=true]{background:var(--brand);color:var(--on);border-color:var(--brand)}
+input,select{font:inherit;color:var(--ink);background:var(--s);border:1px solid var(--line);border-radius:8px;padding:9px 12px;max-width:100%;box-sizing:border-box}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.card{background:var(--s);border:1px solid var(--line);border-radius:10px;overflow:hidden;position:relative}
+.tile{display:block;width:100%;aspect-ratio:1;background:#dfe6f0;border:0;padding:0}
+.tile svg{width:100%;height:100%}
+.info{padding:12px}.info h3{font-size:1rem}
+.price s{color:var(--mute);margin-left:6px}.off{color:var(--ok);margin-left:6px;font-weight:600}
+.heart{position:absolute;top:8px;right:8px;background:var(--s);border:1px solid var(--line);border-radius:50%;width:36px;height:36px}
+.heart[aria-pressed=true]{color:var(--bad)}
+.ov{position:fixed;inset:0;background:rgba(10,15,30,.55);z-index:20;display:flex;align-items:center;justify-content:center;padding:16px}
+.ov.side{justify-content:flex-end;padding:0}
+.modal{background:var(--s);border-radius:12px;max-width:760px;width:100%;max-height:90vh;overflow:auto;padding:20px;position:relative;box-sizing:border-box}
+.side .modal{height:100%;max-height:none;border-radius:0;max-width:420px}
+.x{position:absolute;top:10px;right:10px;padding:4px 10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:620px){.two{grid-template-columns:1fr}}
+.sizes{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.row{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.mini{width:56px;height:56px;border-radius:8px;overflow:hidden;background:#dfe6f0;flex:none}
+label{display:block;font-weight:600;margin:10px 0 4px}
+.mute{color:var(--mute)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--brand);color:var(--on);padding:10px 18px;border-radius:8px;z-index:30}
+.err{color:var(--bad)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
