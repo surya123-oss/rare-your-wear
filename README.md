@@ -2,7 +2,7 @@
 
 A responsive men's clothing storefront built with **React 18**, **HTML** and **CSS**. Browse shirts, T-shirts, jeans, trousers and footwear, save favourites, build a cart and place an order.
 
-**Live demo:** https://YOUR-USERNAME.github.io/rare-your-wear/ (after you enable GitHub Pages, see below)
+**Live demo:** https://surya123-oss.github.io/rare-your-wear/ (after you enable GitHub Pages, see below)
 
 ## Features
 
@@ -47,7 +47,7 @@ Or serve it with Python: `python -m http.server 8000` and open http://localhost:
 1. Push this folder to a new GitHub repository named `rare-your-wear`.
 2. Go to **Settings → Pages**.
 3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-4. After a minute your site is live at `https://YOUR-USERNAME.github.io/rare-your-wear/`.
+4. After a minute your site is live at `https://surya123-oss.github.io/rare-your-wear/`.
 
 ## Limitations
 
